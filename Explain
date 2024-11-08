@@ -1,0 +1,70 @@
+// Ce code JavaScript gère l'envoi d'un formulaire via AJAX en utilisant fetch, ce qui permet de soumettre les données sans recharger la page. Voici une explication détaillée de chaque ligne :
+
+// javascript
+// Copier le code
+// document.querySelector('form').addEventListener('submit', function(event) {
+//     event.preventDefault(); // Empêche le formulaire de soumettre normalement
+// Sélection du formulaire : document.querySelector('form') sélectionne le premier formulaire de la page.
+// Ajout d'un écouteur d'événement : addEventListener('submit', ...) déclenche la fonction à chaque envoi du formulaire.
+// Empêcher l'envoi traditionnel : event.preventDefault() empêche le formulaire de recharger la page, permettant d'envoyer les données via JavaScript.
+// javascript
+// Copier le code
+//     const form = event.target;
+//     fetch(form.action, {
+//         method: form.method,
+//         body: new FormData(form),
+//         headers: {
+//             'Accept': 'application/json'
+//         }
+//     })
+// Cible du formulaire : const form = event.target; désigne le formulaire lui-même, pour accéder à ses propriétés.
+// Utilisation de fetch : fetch(form.action, { ... }) envoie les données du formulaire au chemin spécifié dans action.
+// Configuration de la requête :
+// Méthode HTTP : method: form.method envoie la requête selon la méthode (ex. : POST).
+// Données du formulaire : body: new FormData(form) crée un objet FormData contenant toutes les données saisies.
+// En-tête HTTP : { 'Accept': 'application/json' } informe le serveur que la réponse attendue est en JSON.
+// javascript
+// Copier le code
+//     .then(response => {
+//         if (response.ok) {
+//             form.reset(); // Réinitialise le formulaire
+//             alert('Merci, votre message a été envoyé !');
+//         } else {
+//             alert('Il y a eu une erreur, veuillez réessayer.');
+//         }
+//     })
+// Traitement de la réponse : .then(response => { ... }) gère la réponse du serveur.
+// Vérification du succès : if (response.ok) vérifie si la réponse a un statut HTTP de succès (entre 200 et 299).
+// Réinitialisation et message de confirmation : form.reset(); vide le formulaire, et alert('Merci, votre message a été envoyé !'); affiche un message de confirmation.
+// Gestion des erreurs : Sinon, un message d'erreur est affiché.
+// javascript
+// Copier le code
+//     .catch(error => {
+//         alert('Il y a eu une erreur, veuillez réessayer.');
+//     });
+// Gestion des erreurs réseau : .catch(error => { ... }) capture les erreurs, par exemple si le serveur n'est pas accessible, et affiche un message d'erreur.
+// En résumé
+// Ce code envoie les données du formulaire en arrière-plan sans recharger la page, affiche un message de succès si l'envoi réussit, et gère les erreurs potentielles.
+
+
+
+// document.querySelector('form').addEventListener('submit', function (event) {
+    //     event.preventDefault(); // Empêche le formulaire de soumettre normalement
+    //     const form = event.target;
+    //     fetch(form.action, {
+    //         method: form.method,
+    //         body: new FormData(form),
+    //         headers: {
+    //             'Accept': 'application/json'
+    //         }
+    //     }).then(response => {
+    //         if (response.ok) {
+    //             form.reset(); // Réinitialise le formulaire
+    //             alert('Merci, votre message a été envoyé !');
+    //         } else {
+    //             alert('Il y a eu une erreur, veuillez réessayer.');
+    //         }
+    //     }).catch(error => {
+    //         alert('Il y a eu une erreur, veuillez réessayer.');
+    //     });
+    // });
