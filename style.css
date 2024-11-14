@@ -258,8 +258,8 @@ img {
 }
 
 .cloud button {
-    width: 170px;
-    height: 45px;
+    width: 150px;
+    height: 40px;
     border: none;
     border-radius: 100px;
     background-color: #ff8000;
@@ -476,8 +476,8 @@ li img {
     bottom: 20px;
     right: 20px;
     background-color: #fff;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -490,7 +490,7 @@ li img {
     background-color: transparent;
     border: none;
     color: #333;
-    font-size: 30px;
+    font-size: 25px;
     cursor: pointer;
 }
 
@@ -516,8 +516,8 @@ li img {
 /*section de formulaire de modal */
 
 .contactForm {
-    width: 37%;
-    height: 500px;
+    width: 33%;
+    height: 510px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -551,7 +551,7 @@ li img {
 
 form {
     padding: 20px 25px 20px 20px;
-    width: 350px;
+    width: 330px;
     height: 450px;
     background-color: #ff8000;
     border-radius: 10px;
