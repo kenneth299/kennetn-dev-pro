@@ -169,12 +169,12 @@ document.querySelector('form').addEventListener('submit', function (e) {
 
 
 //code pour desactiver le click droit et empcher l'inspection 
-document.addEventListener("contextmenu", (e) => e.preventDefault());
-document.onkeydown = function (e) {
-    if (e.keyCode == 123 || (e.ctrlKey && e.shiftKey && (e.keyCode == 73 || e.keyCode == 74))) {
-        return false;
-    }
-};
+// document.addEventListener("contextmenu", (e) => e.preventDefault());
+// document.onkeydown = function (e) {
+//     if (e.keyCode == 123 || (e.ctrlKey && e.shiftKey && (e.keyCode == 73 || e.keyCode == 74))) {
+//         return false;
+//     }
+// };
 
 
 
