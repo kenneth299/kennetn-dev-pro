@@ -14,11 +14,12 @@ window.addEventListener('scroll', function () {
 
 
 var letter = [
-    "Développeur Fullstack",
-    "Spécialiste Frontend",
-    "Créateur d'interfaces",
-    " Modernes et Fonctionnelles"
+    "Développeur Web",
+    "Créateur de Chatbots",
+    "Expert en Frontend",
+    "Interfaces Intuitives et Modernes"
 ];
+
 
 var letterIndex = 0
 var onlyIndex = 0
