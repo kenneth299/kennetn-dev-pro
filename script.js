@@ -130,6 +130,26 @@ menuIcon.addEventListener('click', function () {
 
 //formulaire de contact
 
+const notyf = new Notyf({
+    position: {
+        x: 'right',   // Position horizontale: à droite
+        y: 'top'      // Position verticale: en haut
+    },
+    duration: 4000,    // Durée de la notification en ms
+    types: [
+        {
+            type: 'success',
+            background: 'green', // Couleur de fond pour la notification de succès
+            icon: {
+                className: 'material-icons',  // Classe CSS pour utiliser une icône
+                tagName: 'i',  // L'élément HTML à utiliser
+                text: 'check_circle' // Icône de succès
+            }
+        }
+    ]
+});
+
+
 document.querySelector('form').addEventListener('submit', function (e) {
     e.preventDefault();
 
@@ -143,33 +163,20 @@ document.querySelector('form').addEventListener('submit', function (e) {
     }).then(reponse => {
         if (reponse.ok) {
             form.reset(); // Réinitialiser le formulaire
-            Swal.fire({ //Si le formulaire est envoiye avec succes afficher ce message
-                title: 'Succès!',
-                text: 'Votre message a bien été envoyé!',
-                icon: 'success',
-                confirmButtonText: 'OK'
-            });
-        } else { //Si le formulaire n'a pas ete soumis avec succes afficher ce message 
-            Swal.fire({
-                title: 'Erreur',
-                text: 'Une erreur est survenue, veuillez réessayer',
-                icon: 'error',
-                confirmButtonText: 'OK'
-            });
+            form.classList.add('hidden')
+            notyf.success('Votre message a bien été envoyé!');
+            //si la reponse est envoiyer on ferme le formulaire
+        } else { // Si le formulaire n'a pas été soumis avec succès afficher ce message 
+            notyf.error('Une erreur est survenue, veuillez réessayer');
         }
-    }).catch(error => { //Si le messge n'est pas soumis afficher l'erreur ce message d'erreur
-        Swal.fire({
-            title: 'Erreur',
-            text: 'Une erreur est survenue, veuillez réessayer',
-            icon: 'error',
-            confirmButtonText: 'OK'
-        });
-        console.error('Erreur : ', error); //Afficher l'erreur dans la console.log
+    }).catch(error => { // Si le message n'est pas soumis afficher l'erreur ce message d'erreur
+        notyf.error('Une erreur est survenue, veuillez réessayer');
     });
+
 });
 
 
-//code pour desactiver le click droit et empcher l'inspection 
+//code pour desactiver le click droit et empcher l'inspection
 // document.addEventListener("contextmenu", (e) => e.preventDefault());
 // document.onkeydown = function (e) {
 //     if (e.keyCode == 123 || (e.ctrlKey && e.shiftKey && (e.keyCode == 73 || e.keyCode == 74))) {
