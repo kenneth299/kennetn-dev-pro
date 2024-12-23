@@ -656,6 +656,11 @@ form .button {
 
 
 
+.active {
+    background-color: #ff8000;
+    border-radius: 8px;
+}
+
 
 
 
@@ -1387,18 +1392,16 @@ form .button {
     .menu {
         display: none !important;
         flex-direction: column;
-        background: #ff8000;
+        background: #303940;
         /* Ajout d'un dégradé de couleurs */
         position: absolute;
-        top: 60px;
-        right: auto;
-        left: auto;
-        width: 80%;
-        height: 400px;
+        top: 3.4rem;
+        right: 0;
+        left: 0;
         /* Arrondir les bords du menu */
         box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
         /* Ombre plus douce et plus large */
-        padding: 20px;
+        padding: 30px;
         /* Ajouter un peu de padding à l'intérieur du menu */
         z-index: 1000;
         transition: height 0.5s ease, padding 0.5s ease;
@@ -1432,15 +1435,11 @@ form .button {
         /* Arrondir les bords des liens */
         display: block;
         /* Occuper toute la largeur du conteneur */
-        transition: background-color 0.3s ease, transform 0.3s ease;
-        /* Transition douce pour l'effet hover */
     }
 
     .menu li a:hover {
         background-color: white;
         /* Changement de couleur au survol */
-        transform: scale(1.05);
-        /* Légère mise en avant des liens au survol */
     }
 
 

@@ -185,6 +185,37 @@ document.querySelector('form').addEventListener('submit', function (e) {
 // };
 
 
+function setActiveLink() {
+    // Sélectionnez tous les éléments <li>
+    const links = document.querySelectorAll('.menu li');
+
+    // Récupérer l'identifiant du lien actif depuis localStorage
+    const activeLinkId = localStorage.getItem('activeLinkId');
+
+    // Si un identifiant est stocké, définir le lien correspondant comme actif
+    if (activeLinkId) {
+        document.getElementById(activeLinkId)?.classList.add('active');
+    }
+
+    // Parcourir chaque lien pour ajouter l'événement
+    links.forEach(link => {
+        link.addEventListener('click', function () {
+            // Retirer la classe "active" de tous les éléments
+            links.forEach(item => item.classList.remove('active'));
+
+            // Ajouter la classe "active" à l'élément cliqué
+            this.classList.add('active');
+
+            // Sauvegarder l'identifiant du lien actif dans localStorage
+            localStorage.setItem('activeLinkId', this.id);
+        });
+    });
+}
+
+// Appeler la fonction après le chargement de la page
+setActiveLink();
+
+
 
 
 
