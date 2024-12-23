@@ -50,6 +50,9 @@ img {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+li {
+    padding: 10px;
+}
 
 .menu_projet {
     width: 70%;
@@ -57,8 +60,7 @@ img {
     display: flex;
     justify-content: end;
     align-items: center;
-    gap: 30px;
-
+    gap: 20px;
 }
 
 .menu_projet ul {
@@ -890,6 +892,9 @@ form .button {
         font-size: 13px;
     }
 
+    li {
+        padding: 0;
+    }
 
 }
 
@@ -1092,6 +1097,11 @@ form .button {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-size: 13px;
     }
+
+    li {
+        padding: 0;
+    }
+
 
 }
 
@@ -1608,6 +1618,11 @@ form .button {
         height: 600px;
         flex-wrap: wrap;
     }
+
+    li {
+        padding: 0;
+    }
+
 
     .technol {
         width: 100%;
