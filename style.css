@@ -65,7 +65,7 @@ li {
 
 .menu_projet ul {
     display: flex;
-    gap: 30px;
+    gap: 20px;
 }
 
 
@@ -417,10 +417,15 @@ li img {
     color: white;
     border: none;
     cursor: pointer;
+
     font-size: 14px;
     border-radius: 5px;
 }
 
+.splide__slide img{
+    border-radius: 20px;
+  }
+  
 
 
 
@@ -449,16 +454,16 @@ li img {
 }
 
 .link a {
-    width: 50px;
+    width: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
     border-radius: 50%;
-    height: 50px;
+    height: 40px;
     background-color: #fffffc;
     color: #ff8000;
-    font-size: 17px;
+    font-size: 20px;
     transition: all 200ms;
 }
 
@@ -467,7 +472,6 @@ li img {
     background-color: #ff8000;
     color: white;
 }
-
 
 
 .footer p {
@@ -1163,6 +1167,11 @@ form .button {
         justify-content: center;
         align-items: center;
         gap: 30px;
+    }
+
+    .menu_projet ul {
+        display: flex;
+        gap: 20px;
     }
 
     .anime h1 {
